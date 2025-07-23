@@ -5,6 +5,8 @@ class m9c1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+    Size screenSize = MediaQuery.of(context).size;
     void showAlertDialog() {
       showDialog(
         context: context,
@@ -85,8 +87,9 @@ class m9c1 extends StatelessWidget {
     }
 
     void showbottomsheet() {
-      showModalBottomSheet(context: context, builder: (context) => Container(
+      showModalBottomSheet(context: context,isDismissible: false, builder: (context) => Container(
         child: Column(
+
           mainAxisSize: MainAxisSize.min,
           children: [
             Text("choose an option", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
@@ -139,6 +142,12 @@ class m9c1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Container(
+              color: Colors.amber,
+              width: screenSize.width,
+              height: 200,
+
+            ),
             SizedBox(height: 20),
 
             ElevatedButton(

@@ -56,7 +56,7 @@ class home extends StatelessWidget {
             // Top Banner with Text and Search
             Stack(
               children: [
-                Container(
+                SizedBox(
                   height: 220,
                   width: double.infinity,
                   child: Image.network(
